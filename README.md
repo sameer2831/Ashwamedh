@@ -44,7 +44,7 @@ Follow these steps to get the app running on your local machine.
 ```bash
  git clone https://github.com/sameer2831/Ashwamedh.git
 cd Ashwamedh
-
+```
 ### 2. Open the project in Android Studio
 Make sure you are using the latest stable version of Android Studio.
 
@@ -74,3 +74,4 @@ Make sure you are using the latest stable version of Android Studio.
 │   ├── build.gradle
 ├── build.gradle
 └── settings.gradle
+```
