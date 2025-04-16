@@ -23,6 +23,7 @@ class EventAdapter(
         val eventImage: ImageView = itemView.findViewById(R.id.eventImage)
         val eventTitle: TextView = itemView.findViewById(R.id.eventTitle)
         val eventCategory: TextView = itemView.findViewById(R.id.eventCategory)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {

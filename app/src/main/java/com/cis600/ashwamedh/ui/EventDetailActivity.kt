@@ -10,12 +10,18 @@ import com.cis600.ashwamedh.model.Event
 
 class EventDetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEventDetailBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEventDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val event = intent.getSerializableExtra("event") as Event
+
+        // Set ActionBar title and enable back button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = event.title
+
         binding.eventTitleText.text = event.title
         binding.eventDescText.text = event.description
         binding.eventVenue.text = "Venue: ${event.venue}"
@@ -27,5 +33,11 @@ class EventDetailActivity : AppCompatActivity() {
             intent.putExtra("eventName", event.title)
             startActivity(intent)
         }
+
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed()
+        return true
     }
 }

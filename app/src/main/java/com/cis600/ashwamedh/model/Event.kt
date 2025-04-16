@@ -11,4 +11,4 @@ data class Event(
     val venue: String = "",
     val rules: String = "",
     val imageUrl: String = ""
-) : Serializable
+) : java.io.Serializable
