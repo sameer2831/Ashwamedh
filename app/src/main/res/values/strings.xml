@@ -10,7 +10,8 @@
     <string name="register_now">Register Now</string>
     <string name="contact_us">Contact Us</string>
     <string name="explore_events">Explore Events</string>
-    <string name="welcome_to_ashwamedh_2025">Welcome to Ashwamedh 2025!</string>
+    <string name="welcome_to_ashwamedh_2020">Welcome to Ashwamedh 2020!</string>
     <string name="registration_logo">Registration logo</string>
+    <string name="event_image">Event_Image</string>
 
 </resources>

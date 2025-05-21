@@ -31,8 +31,8 @@
                 android:id="@+id/welcomeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/welcome_to_ashwamedh_2025"
-                android:textSize="22sp"
+                android:text="@string/welcome_to_ashwamedh_2020"
+                android:textSize="27sp"
                 android:textStyle="bold"
                 android:layout_marginTop="12dp"
                 android:layout_gravity="center_horizontal"
@@ -44,6 +44,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/slogan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blend of Sports and Cultural events."
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/primaryColor" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ahswamedh_poster"/>
 
             <!-- 🔥 What's Hot -->
             <TextView
@@ -59,9 +76,12 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerHotEvents"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="horizontal" />
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical" />
+
+
 
         </LinearLayout>
     </ScrollView>

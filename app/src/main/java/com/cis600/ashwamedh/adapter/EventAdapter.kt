@@ -38,7 +38,7 @@ class EventAdapter(
         holder.eventCategory.text = event.category
 
         Glide.with(context)
-            .load(event.imageUrl)
+            .load(event.imageURL)
             .placeholder(R.drawable.placeholder)
             .into(holder.eventImage)
 

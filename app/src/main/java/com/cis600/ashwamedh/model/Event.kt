@@ -1,6 +1,7 @@
 package com.cis600.ashwamedh.model
 
 import java.io.Serializable
+import java.net.URL
 
 data class Event(
     val title: String = "",
@@ -10,5 +11,6 @@ data class Event(
     val time: String = "",
     val venue: String = "",
     val rules: String = "",
-    val imageUrl: String = ""
+    val imageURL:  String= "",
+    val isHot: Boolean = false
 ) : java.io.Serializable
