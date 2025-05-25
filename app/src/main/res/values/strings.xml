@@ -13,5 +13,6 @@
     <string name="welcome_to_ashwamedh_2020">Welcome to Ashwamedh 2020!</string>
     <string name="registration_logo">Registration logo</string>
     <string name="event_image">Event_Image</string>
+    <string name="google_maps_key">${MAPS_API_KEY}</string>
 
 </resources>

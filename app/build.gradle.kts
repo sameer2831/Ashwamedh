@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.google.gms.google.services)
     id("kotlin-kapt")
 }
-
+val MAPS_API_KEY: String = project.findProperty("MAPS_API_KEY") as? String ?: ""
 android {
     namespace = "com.cis600.ashwamedh"
     compileSdk = 34
@@ -17,6 +17,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "MAPS_API_KEY", "\"$MAPS_API_KEY\"")
+
     }
 
     buildTypes {
@@ -31,6 +33,7 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        buildConfig = true
     }
 
     compileOptions {
@@ -58,6 +61,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
+    implementation ("com.google.android.gms:play-services-maps:18.2.0")
 
     //kapt("com.github.bumptech.glide:compiler:4.16.0")
 }
