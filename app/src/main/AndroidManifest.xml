@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cis600.ashwamedh">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ashwamedh"
         tools:targetApi="31">
-
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
         <!-- Splash screen (Launcher) -->
         <activity
             android:name=".ui.SplashActivity"
@@ -27,6 +31,7 @@
 
         <!-- Main navigation screen -->
         <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.MapActivity" />
         <activity android:name=".ui.EventListActivity" />
         <activity android:name=".ui.RegistrationActivity" />
         <activity android:name=".ui.ContactActivity" />

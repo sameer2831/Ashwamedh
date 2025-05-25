@@ -56,11 +56,20 @@
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/primaryColor" />
 
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="300dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/ahswamedh_poster"/>
+
+            <Button
+                android:id="@+id/btnDirections"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Directions"
+                android:layout_gravity="center"
+                android:padding="8dp"/>
 
             <!-- 🔥 What's Hot -->
             <TextView
