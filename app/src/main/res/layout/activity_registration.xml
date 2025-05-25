@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <!-- Scrollable content -->
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -73,7 +73,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         app:boxBackgroundMode="outline"
-                        app:boxStrokeColor="@color/primaryColor">
+                        app:boxStrokeColor="@color/primaryColor"
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/inputName"
@@ -89,7 +90,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         app:boxBackgroundMode="outline"
-                        app:boxStrokeColor="@color/primaryColor">
+                        app:boxStrokeColor="@color/primaryColor"
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/inputEmail"
@@ -105,7 +107,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         app:boxBackgroundMode="outline"
-                        app:boxStrokeColor="@color/primaryColor">
+                        app:boxStrokeColor="@color/primaryColor"
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/inputPhone"
@@ -121,7 +124,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         app:boxBackgroundMode="outline"
-                        app:boxStrokeColor="@color/primaryColor">
+                        app:boxStrokeColor="@color/primaryColor"
+                        >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/inputCollege"
@@ -137,14 +141,20 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
                         app:boxBackgroundMode="outline"
-                        app:boxStrokeColor="@color/primaryColor">
+                        app:boxStrokeColor="@color/primaryColor"
+                        >
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:id="@+id/inputEvent"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/event_name"
-                            android:inputType="text"/>
+                            android:dropDownHeight="wrap_content"
+                            android:hint="Event Name"
+                            android:padding="15dp"
+                            android:inputType="none"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:enabled="true"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <!-- Submit Button -->
@@ -152,8 +162,8 @@
                         android:id="@+id/submitRegistration"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
                         android:text="@string/submit"
+                        android:contentDescription="Submit registration"
                         android:textColor="@color/textColorPrimary"
                         android:backgroundTint="@color/primaryColor"
                         android:fontFamily="sans-serif-medium"
@@ -162,7 +172,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <!-- Bottom Navigation Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
