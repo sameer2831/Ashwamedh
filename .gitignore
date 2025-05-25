@@ -7,7 +7,7 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
-.DS_Store
+
 /build
 /captures
 .externalNativeBuild
@@ -15,4 +15,6 @@
 local.properties
 # Firebase config
 google-services.json
+# Others
+.DS_Store
 
