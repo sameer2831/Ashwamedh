@@ -84,4 +84,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👨‍💻 Developer
 
-- Sameer Ashok Balkawade — [LinkedIn]([https://linkedin.com/in/sameerghule](https://www.linkedin.com/in/sameer-balkawade/)) | [Email](mailto:sameerb2831@gmail.com) | [Portfolio](https://sameer2831.github.io/portfolio/)
+- Sameer Ashok Balkawade — [LinkedIn](https://www.linkedin.com/in/sameer-balkawade/) | [Email](mailto:sameerb2831@gmail.com) | [Portfolio](https://sameer2831.github.io/portfolio/)
