@@ -2,14 +2,18 @@ package com.cis600.ashwamedh.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cis600.ashwamedh.R
 import com.cis600.ashwamedh.databinding.ActivityRegistrationBinding
+import com.cis600.ashwamedh.model.Event
 import com.google.firebase.firestore.FirebaseFirestore
 
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrationBinding
+    private val eventTitles = mutableListOf<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
@@ -38,13 +42,33 @@ class RegistrationActivity : AppCompatActivity() {
         }
         val eventName = intent.getStringExtra("eventName") ?: ""
 
+        FirebaseFirestore.getInstance().collection("events")
+            .get().addOnSuccessListener { result ->
+                for (doc in result) {
+                    val event = doc.toObject(Event::class.java)
+                    eventTitles.add(event.title)
+                }
+                Log.d("RegistrationActivity.kt", "Event Titles fetched: $eventTitles")
+                val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, eventTitles)
+                binding.inputEvent.setAdapter(adapter)
+                binding.inputEvent.setOnClickListener {
+                    binding.inputEvent.showDropDown()
+                }
+                if (eventName.isNotEmpty()) {
+                    binding.inputEvent.setText(eventName, false) // 'false' prevents filtering and keeps dropdown intact
+                }
+            }
+            .addOnFailureListener {
+                Log.e("RegistrationActivity.kt", "Failed to fetch events", it)
+            }
+
         binding.submitRegistration.setOnClickListener {
             val reg = hashMapOf(
                 "name" to binding.inputName.text.toString(),
                 "email" to binding.inputEmail.text.toString(),
                 "phone" to binding.inputPhone.text.toString(),
                 "college" to binding.inputCollege.text.toString(),
-                "eventName" to eventName
+                "eventName" to binding.inputEvent.text.toString()
             )
 
             FirebaseFirestore.getInstance().collection("registrations")
@@ -57,5 +81,7 @@ class RegistrationActivity : AppCompatActivity() {
                     Toast.makeText(this, "Registration failed", Toast.LENGTH_SHORT).show()
                 }
         }
+
+
     }
 }
