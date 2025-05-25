@@ -31,7 +31,7 @@ AshwamedhApp is an Android application developed for **AISSMS COE Pune** to supp
 
 ## 📷 Screenshots
 
-![image](https://github.com/user-attachments/assets/52eeabf9-db7f-4f76-8d26-ffcfba33798d)
+![image](https://github.com/user-attachments/assets/929f6c26-b4c1-46c8-8b46-19533722df88)
 
 
 
